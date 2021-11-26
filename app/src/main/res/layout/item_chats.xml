@@ -5,12 +5,13 @@
     android:layout_height="100dp"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemChatsLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/manColorOne">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/layoutStart"
@@ -21,8 +22,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/chat_accountImage"
-            android:layout_width="74dp"
-            android:layout_height="74dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:scaleType="centerCrop"
             android:src="@drawable/man_profile"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -37,7 +38,7 @@
             android:fontFamily="@font/ubuntu_medium"
             android:text="Alex Broto"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/chat_accountImage"
@@ -47,8 +48,8 @@
 
         <ImageView
             android:id="@+id/message_Filetype"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_margin="5dp"
             android:src="@drawable/videotype"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +65,7 @@
             android:fontFamily="@font/ubuntu_medium"
             android:text="o'qilgan"
             android:textColor="#A9A0C1"
-            android:textSize="11sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/message_Filetype"
@@ -75,34 +76,41 @@
             android:id="@+id/accountWhenOnline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="2 soat oldin"
             android:textColor="#A9A0C1"
             app:layout_constraintRight_toLeftOf="@id/layoutEnd"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
             android:id="@+id/dot_accountStatus"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/notification_layout_chats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toLeftOf="@id/layoutEnd"
             app:layout_constraintTop_toBottomOf="@id/accountWhenOnline">
 
-            <TextView
-                android:id="@+id/unreadMessagesCount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/rubik"
-                android:text="1"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp">
 
+                <TextView
+                    android:id="@+id/unreadMessagesCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik"
+                    android:text="1"
+                    android:textColor="#fff"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/layoutCenter"
@@ -118,6 +126,7 @@
             android:fontFamily="@font/rubik"
             android:text="Judayam zo'r!"
             android:textColor="#A9A0C1"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/layoutCenter"
             app:layout_constraintRight_toLeftOf="@id/dot_accountStatus"

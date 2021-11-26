@@ -1,8 +1,11 @@
 package com.limuealimi.islamicglobalmessengerfromyasimin.adapters
 
+import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.limuealimi.islamicglobalmessengerfromyasimin.R
 import com.limuealimi.islamicglobalmessengerfromyasimin.databinding.ItemChatsBinding
@@ -21,17 +24,22 @@ class ChatsAdapter(private val chatsList: List<Chats>) : RecyclerView.Adapter<Ch
                 lastMessageText.text = chats.lastMessage
                 unreadMessagesCount.text = chats.unReadMessagesCount.toString()
 
+                if (chats.contacts.gender == "male") {
+                    itemChatsLayout.setBackgroundColor(Color.parseColor("#4E426D"))
+                } else if (chats.contacts.gender == "female") {
+                    itemChatsLayout.setBackgroundColor(Color.parseColor("#FFADDE"))
+                }
+
                 if (accountWhenOnline.text == "online") {
-                    dotAccountStatus.setBackgroundColor(R.color.notificationColor.toInt())
-                } else if (accountWhenOnline.text == "offline" && chats.contacts.gender == "male") {
-                    dotAccountStatus.setBackgroundColor(R.color.manColorOne.toInt())
-                } else if (accountWhenOnline.text == "offline" && chats.contacts.gender ==  "female") {
-                    dotAccountStatus.setBackgroundColor(R.color.womanColorOne.toInt())
+                    dotAccountStatus.setCardBackgroundColor(Color.parseColor("#57BECF"))
+                } else if (accountWhenOnline.text != "online" && chats.contacts.gender == "male") {
+                    dotAccountStatus.setCardBackgroundColor(Color.parseColor("#4E426D"))
+                } else if (accountWhenOnline.text != "online" && chats.contacts.gender == "female") {
+                    dotAccountStatus.setCardBackgroundColor(Color.parseColor("#FFADDE"))
                 }
             }
         }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Vh {
         return Vh(
