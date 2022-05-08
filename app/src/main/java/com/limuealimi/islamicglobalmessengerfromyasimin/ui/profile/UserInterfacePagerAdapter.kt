@@ -1,13 +1,7 @@
-package com.limuealimi.islamicglobalmessengerfromyasimin.adapters
+package com.limuealimi.islamicglobalmessengerfromyasimin.ui.profile
 
-import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
-import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.limuealimi.islamicglobalmessengerfromyasimin.ui.*
 
 class UserInterfacePagerAdapter(
     private val fm: Fragment,

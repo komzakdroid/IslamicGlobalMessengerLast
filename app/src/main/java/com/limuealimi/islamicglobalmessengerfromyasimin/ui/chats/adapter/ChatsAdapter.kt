@@ -1,15 +1,11 @@
-package com.limuealimi.islamicglobalmessengerfromyasimin.adapters
+package com.limuealimi.islamicglobalmessengerfromyasimin.ui.chats.adapter
 
-import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.limuealimi.islamicglobalmessengerfromyasimin.R
 import com.limuealimi.islamicglobalmessengerfromyasimin.databinding.ItemChatsBinding
-import com.limuealimi.islamicglobalmessengerfromyasimin.models.Chats
+import com.limuealimi.islamicglobalmessengerfromyasimin.data.models.Chats
 
 class ChatsAdapter(private val chatsList: List<Chats>) : RecyclerView.Adapter<ChatsAdapter.Vh>() {
     inner class Vh(private var itemChatsBinding: ItemChatsBinding) :

@@ -1,19 +1,20 @@
-package com.limuealimi.islamicglobalmessengerfromyasimin.ui
+package com.limuealimi.islamicglobalmessengerfromyasimin.ui.profile
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.setFragmentResultListener
-import androidx.recyclerview.widget.RecyclerView
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.google.android.material.tabs.TabLayoutMediator
 import com.limuealimi.islamicglobalmessengerfromyasimin.R
-import com.limuealimi.islamicglobalmessengerfromyasimin.adapters.ContactsAdapter
-import com.limuealimi.islamicglobalmessengerfromyasimin.adapters.UserInterfacePagerAdapter
+import com.limuealimi.islamicglobalmessengerfromyasimin.ui.home.ContactsAdapter
 import com.limuealimi.islamicglobalmessengerfromyasimin.databinding.FragmentUserProfileBinding
-import com.limuealimi.islamicglobalmessengerfromyasimin.models.Chats
-import com.limuealimi.islamicglobalmessengerfromyasimin.models.Contacts
-import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
+import com.limuealimi.islamicglobalmessengerfromyasimin.data.models.Contacts
+import com.limuealimi.islamicglobalmessengerfromyasimin.ui.chats.ChatsFragment
+import com.limuealimi.islamicglobalmessengerfromyasimin.ui.discover.DiscoverFragment
+import com.limuealimi.islamicglobalmessengerfromyasimin.ui.records.RecordsFragment
+import com.limuealimi.islamicglobalmessengerfromyasimin.ui.spams.SpamsFragment
+import com.limuealimi.islamicglobalmessengerfromyasimin.ui.stories.StoriesFragment
 
 class UserProfileFragment : Fragment(R.layout.fragment_user_profile) {
 

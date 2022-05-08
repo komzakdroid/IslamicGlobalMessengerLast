@@ -1,4 +1,4 @@
-package com.limuealimi.islamicglobalmessengerfromyasimin.models
+package com.limuealimi.islamicglobalmessengerfromyasimin.data.models
 
 data class Chats(
     val contacts: Contacts,
