@@ -1,4 +1,4 @@
-package com.limuealimi.islamicglobalmessengerfromyasimin.ui
+package com.limuealimi.islamicglobalmessengerfromyasimin.ui.chats
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.setFragmentResultListener
 import com.limuealimi.islamicglobalmessengerfromyasimin.R
-import com.limuealimi.islamicglobalmessengerfromyasimin.adapters.ChatsAdapter
+import com.limuealimi.islamicglobalmessengerfromyasimin.ui.chats.adapter.ChatsAdapter
 import com.limuealimi.islamicglobalmessengerfromyasimin.databinding.FragmentChatsBinding
-import com.limuealimi.islamicglobalmessengerfromyasimin.models.Chats
-import com.limuealimi.islamicglobalmessengerfromyasimin.models.Contacts
-import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
+import com.limuealimi.islamicglobalmessengerfromyasimin.data.models.Chats
+import com.limuealimi.islamicglobalmessengerfromyasimin.data.models.Contacts
 
 class ChatsFragment : Fragment(R.layout.fragment_chats) {
 
@@ -54,7 +53,7 @@ class ChatsFragment : Fragment(R.layout.fragment_chats) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = FragmentChatsBinding.inflate(inflater, container, false)
         loadDataContact()

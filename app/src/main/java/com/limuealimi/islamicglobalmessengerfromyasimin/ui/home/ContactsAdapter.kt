@@ -1,10 +1,10 @@
-package com.limuealimi.islamicglobalmessengerfromyasimin.adapters
+package com.limuealimi.islamicglobalmessengerfromyasimin.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.limuealimi.islamicglobalmessengerfromyasimin.databinding.ItemContactviewBinding
-import com.limuealimi.islamicglobalmessengerfromyasimin.models.Contacts
+import com.limuealimi.islamicglobalmessengerfromyasimin.data.models.Contacts
 
 class ContactsAdapter(private val contactList: List<Contacts>) :
     RecyclerView.Adapter<ContactsAdapter.Vh>() {

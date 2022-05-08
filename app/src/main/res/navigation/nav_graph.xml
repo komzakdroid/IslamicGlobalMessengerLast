@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.HomeFragment"
+        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_userProfileFragment"
             app:destination="@id/userProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/userProfileFragment"
-        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.UserProfileFragment"
+        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.profile.UserProfileFragment"
         android:label="fragment_user_profile"
-        tools:layout="@layout/fragment_user_profile" >
+        tools:layout="@layout/fragment_user_profile">
         <action
             android:id="@+id/action_userProfileFragment_to_chatsFragment"
             app:destination="@id/chatsFragment" />
@@ -37,27 +37,36 @@
     </fragment>
     <fragment
         android:id="@+id/chatsFragment"
-        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.ChatsFragment"
+        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.chats.ChatsFragment"
         android:label="fragment_chats"
         tools:layout="@layout/fragment_chats" />
     <fragment
         android:id="@+id/discoverFragment"
-        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.DiscoverFragment"
+        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.discover.DiscoverFragment"
         android:label="fragment_discover"
         tools:layout="@layout/fragment_discover" />
     <fragment
         android:id="@+id/recordsFragment"
-        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.RecordsFragment"
+        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.records.RecordsFragment"
         android:label="fragment_records"
         tools:layout="@layout/fragment_records" />
     <fragment
         android:id="@+id/storiesFragment"
-        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.StoriesFragment"
+        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.stories.StoriesFragment"
         android:label="fragment_stories"
         tools:layout="@layout/fragment_stories" />
     <fragment
         android:id="@+id/spamsFragment"
-        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.SpamsFragment"
+        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.spams.SpamsFragment"
         android:label="fragment_spams"
         tools:layout="@layout/fragment_spams" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.limuealimi.islamicglobalmessengerfromyasimin.ui.authenticating.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
